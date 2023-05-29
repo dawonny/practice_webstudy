@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Example</title>
+    <style type="text/css">
+        /* 공통속성 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* 전체박스 : 전체 레이아웃의 폭, 정렬을 제어하기 위한 박스 */
+        #container {
+            width: 800px;
+            margin: auto;
+        }
+
+        /* 상단 : 폭 = 부모값, 높이= 고정 */
+        #header {
+            background-color: #f0f;
+            width: auto;
+            height: 100px;
+        }
+
+        /* 내용 : 폭 = 부모값, 높이 = 가변 */
+        #content {
+            background-color: #0f0;
+            width: auto;
+            /* 페이지의 최소 높이가 브라우저의 높이를 가득 채우도록 처리 */
+            min-height: 300px;
+        }
+
+        /* 하단 : 폭 = 부모값, 높이 = 고정 */
+        #footer {
+            background-color: #f60;
+            width: auto;
+            height: 80px;
+        }
+
+        /* 내용 > 본문영역 */
+        #body {
+            width: 640px;
+            background-color: #ff0;
+            float: left;
+            min-height: 300px;
+        }
+
+        /* 내용 > 사이드 바 */
+        #sidebar {
+            width: 160px;
+            background-color: #00f;
+            float: left;
+            min-height: 300px;
+        }
+
+        .clear::after {
+            content: '';
+            display: block;
+            clear: both;
+            float: none;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/gallery.css"/>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">상단영역</div>
+        <div id="content" class="clear">
+            
+            <div id="body">본문영역
+                <ul id="gallery">
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지1.jpg" alt="이미지1" />
+                        </span>
+                        <span class="text">바다여행에서의 피부관리 노하우</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지2.jpg" alt="이미지2" />
+                        </span>
+                        <span class="text">서울 시내 봄철 꽃 나들이 10선</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지3.jpg" alt="이미지3" />
+                        </span>
+                        <span class="text">휴식을 위한 여행</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지4.jpg" alt="이미지4" />
+                        </span>
+                        <span class="text">여행을 떠나기 전 체크사항</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지5.jpg" alt="이미지5" />
+                        </span>
+                        <span class="text">친환경이 대세다! 자전거로 떠나는 여행</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지6.jpg" alt="이미지6" />
+                        </span>
+                        <span class="text">아경이 아름다운 곳에서</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지7.gif" alt="이미지7" />
+                        </span>
+                        <span class="text">스마트한 결혼준비 2탄</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지8.jpg" alt="이미지8" />
+                        </span>
+                        <span class="text">권태기가 올 줄은</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지9.jpg" alt="이미지9" />
+                        </span>
+                        <span class="text">특별한 날, 완벽준비 가이드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지10.jpg" alt="이미지10" />
+                        </span>
+                        <span class="text">추억의 사진 복원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지11.jpg" alt="이미지1" />
+                        </span>
+                        <span class="text">일이냐, 사랑이냐. 그것이 문제로다</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <span class="thumb">
+                            <img src="10번 예제에서 사용되는 이미지는 각자 준비하세요/이미지12.jpg" alt="이미지1" />
+                        </span>
+                        <span class="text">흡연에 관한 서로의 진실</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="sidbar">사이드 바</div>
+        </div>
+        <div id="footer">하단영역</div>
+    </div>
+    
+</body>
+</html>
